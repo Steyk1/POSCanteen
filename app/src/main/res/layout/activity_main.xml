@@ -76,11 +76,11 @@
             android:layout_marginTop="5dp"
             android:textColor="#616161"/>
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/signinBtn"
+            android:id="@+id/loginBtn"
             android:layout_width="150dp"
             android:layout_height="43dp"
             android:background="@color/blue"
-            android:text="Sign in"
+            android:text="Log in"
             android:textColor="@color/white"
             android:textAllCaps="false"
             android:textSize="18dp"
@@ -121,6 +121,34 @@
         </RelativeLayout>
 
 
+
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/txtview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't Have an Account? Create One."
+            android:layout_alignParentStart="true"
+
+            />
+
+        <TextView
+            android:id="@+id/regtxt"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:layout_toRightOf="@id/txtview"/>.
 
     </LinearLayout>
 </RelativeLayout>
