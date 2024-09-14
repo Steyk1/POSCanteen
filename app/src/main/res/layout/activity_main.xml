@@ -76,6 +76,7 @@
             android:layout_marginTop="5dp"
             android:textColor="#616161"/>
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signinBtn"
             android:layout_width="150dp"
             android:layout_height="43dp"
             android:background="@color/blue"
