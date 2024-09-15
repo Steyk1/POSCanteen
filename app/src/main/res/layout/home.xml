@@ -73,7 +73,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="FOOD MENU"
+                android:text="SNACK MENU"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:textColor="@color/white"
@@ -84,7 +84,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:text="DRINK MENU"
+                android:text="ESSENTIALS MENU"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
                 android:textColor="@color/white"
@@ -115,7 +115,7 @@
                 android:backgroundTint="#750000"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:text="FOOD MENU"
+                android:text="Milktea"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -126,7 +126,7 @@
                 android:backgroundTint="#169D53"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:text="DRINK MENU"
+                android:text="Frappe"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -137,7 +137,7 @@
                 android:backgroundTint="#750000"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:text="FOOD MENU"
+                android:text="Latte"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -149,7 +149,7 @@
                 android:backgroundTint="#169D53"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"
-                android:text="DRINK MENU"
+                android:text="Coffee"
                 android:textColor="@color/white" />
 
         </LinearLayout>
