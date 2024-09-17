@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-09-13T06:59:46.124991500Z">
+        <DropdownSelection timestamp="2024-09-15T09:30:08.671705300Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="PhysicalDevice" identifier="serial=FY2318610165" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\MSI Bravo\.android\avd\Pixel_7a_API_34.avd" />
             </handle>
           </Target>
         </DropdownSelection>
