@@ -18,15 +18,30 @@ public class MainActivity extends AppCompatActivity {
     private TextView register;
     private EditText username, password;
 
+
     private FirebaseAuth mAuth;
+=======
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
+=======
+        username =findViewById(R.id.usernameInput);
+        password =findViewById(R.id.passwordInput);
+
+        // Correctly reference the ID
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
 
         username = findViewById(R.id.usernameInput);
         password = findViewById(R.id.passwordInput);
