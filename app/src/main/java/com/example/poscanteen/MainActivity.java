@@ -3,6 +3,7 @@ package com.example.poscanteen;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,12 +16,16 @@ public class MainActivity extends AppCompatActivity {
 
     private Button login;
     private TextView register;
+    private EditText username, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        username =findViewById(R.id.usernameInput);
+        password =findViewById(R.id.passwordInput);
 
         // Correctly reference the ID
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
