@@ -168,34 +168,37 @@
 
             <!-- Table Content -->
             <TableRow>
+
+
                 <ImageButton
                     android:id="@+id/item1Btn"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:layout_marginTop="48dp"
-                    android:src="@drawable/baseline_menu_24"
-                    android:background="#00FFFFFF"
-                    android:scaleType="fitCenter"
-                    app:tint="@color/white"/>
+                    android:textAlignment="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="item1" />
 
-                <Button
-                    android:src="@drawable/baseline_menu_24"
-                    android:id="@+id/button"
+                <ImageButton
+                    android:id="@+id/item2Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Button" />
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="item2" />
+
+                <ImageButton
+                    android:id="@+id/item3Btn"
+                    android:layout_width="10dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="item3" />
+
             </TableRow>
 
             <TableRow>
-                <ImageButton
-                    android:id="@+id/item2Btn"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginTop="48dp"
-                    android:src="@drawable/baseline_menu_24"
-                    android:background="#00FFFFFF"
-                    android:scaleType="fitCenter"
-                    app:tint="@color/white"/>
+
             </TableRow>
 
             <!-- You can add more rows as needed -->
