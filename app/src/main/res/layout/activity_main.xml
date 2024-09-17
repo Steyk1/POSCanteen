@@ -1,154 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/white"
-    android:layout_centerHorizontal="true"
+    android:fillViewport="true">
 
-    >
-
-
- <!-- panget si erica -->
-
-    <!-- Comment -->
-    <ImageView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-30dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/lologin" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/snacklogo" />
-
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-        android:paddingTop="235dp"
-        android:orientation="vertical"
->
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Welcome!"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textSize="28dp"
-        android:textColor="#2A2A2A"/>
-        <TextView
+        <!-- Logo Image -->
+        <ImageView
             android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="-30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/lologin"
+            android:id="@+id/loginn"
+            app:layout_constraintBottom_toTopOf="@id/loginn"/>
+
+        <ImageView
+            android:id="@+id/snacklogo"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/snacklogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Welcome and login Text -->
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:textColor="#2A2A2A"
+            app:layout_constraintTop_toBottomOf="@id/loginn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"/> <!-- Adjusted margin for spacing -->
+
+        <TextView
+            android:id="@+id/loginPrompt"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Log in to your account"
             android:gravity="center"
-            android:textSize="20dp"
-            android:textColor="#2A2A2A"/>
+            android:textSize="20sp"
+            android:textColor="#2A2A2A"
+            app:layout_constraintTop_toBottomOf="@id/welcomeText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"/> <!-- Adjusted margin for spacing -->
+
+        <!-- Username and Password Input -->
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:id="@+id/usernameInput"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
             android:background="#EBEBEB"
-            android:layout_margin="15dp"
             android:hint="Username"
-            android:paddingStart="15dp"/>
+            android:paddingStart="15dp"
+            app:layout_constraintTop_toBottomOf="@id/loginPrompt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="24dp"/> <!-- Adjusted margin for spacing -->
+
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:id="@+id/passwordInput"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
             android:background="#EBEBEB"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="5dp"
             android:hint="Password"
-            android:paddingStart="15dp"/>
+            android:paddingStart="15dp"
+            app:layout_constraintTop_toBottomOf="@id/usernameInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="20dp"/> <!-- Same spacing for uniformity -->
+
+        <!-- Forgot Password -->
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/forgotPasswordText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Forgot Password"
-            android:textSize="14dp"
-            android:paddingStart="20dp"
-            android:layout_marginTop="5dp"
-            android:textColor="#616161"/>
+            android:textSize="14sp"
+            android:paddingStart="30dp"
+            android:textColor="#616161"
+            app:layout_constraintTop_toBottomOf="@id/passwordInput"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"/> <!-- Proportional margin spacing -->
+
+        <!-- Login Button -->
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/loginBtn"
             android:layout_width="150dp"
-            android:layout_height="43dp"
+            android:layout_height="45dp"
             android:background="@color/blue"
             android:text="Log in"
             android:textColor="@color/white"
             android:textAllCaps="false"
-            android:textSize="18dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="15dp"/>
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="15dp"
-            android:layout_height="wrap_content">
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/forgotPasswordText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/> <!-- Consistent margin for better flow -->
+
+        <!-- Social login options with divider -->
+        <!-- Social login options with divider -->
+        <!-- Social login options -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/socialtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/loginBtn">
+
+            <!-- Divider Line -->
+            <!-- Divider Line -->
             <View
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="0.7dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#373737"
                 android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"/>
+                android:layout_marginEnd="30dp"
+                android:background="#373737"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Centered white background for text -->
             <View
+                android:id="@+id/white_background"
                 android:layout_width="130dp"
                 android:layout_height="20dp"
-                android:layout_marginBottom="10dp"
                 android:background="@color/white"
-                android:layout_centerHorizontal="true"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- TextView overlapping the white background, centered -->
             <TextView
-                android:layout_width="match_parent"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="or continue with"
-                android:textSize="14dp"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
                 android:gravity="center"
-                android:textColor="#616161"/>
-        </RelativeLayout>
+                android:text="or sign up with"
+                android:textColor="#616161"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/white_background"
+                app:layout_constraintBottom_toBottomOf="@id/white_background" />
 
 
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
-    <LinearLayout
+        <LinearLayout
+            android:id="@+id/socialLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/socialtxt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:padding="10dp">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/facebook"/>
 
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/google"/>
+        </LinearLayout>
 
+        <!-- Register Option -->
         <TextView
             android:id="@+id/txtview"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Don't Have an Account? Create One."
-            android:layout_alignParentStart="true"
-
-            />
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/socialLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp"/>
 
         <TextView
             android:id="@+id/regtxt"
-            android:layout_marginLeft="10dp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Register"
-            android:layout_toRightOf="@id/txtview"/>.
-
-    </LinearLayout>
-</RelativeLayout>
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@id/txtview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="12dp"
+            android:padding="15dp"/> <!-- Adjusted margin for register text -->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
