@@ -1,44 +1,81 @@
-package com.example.poscanteen;
-
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.Button;
+package com.example.poscanteen;import android.os.Bundle;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
-
-import androidx.activity.EdgeToEdge;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class home extends AppCompatActivity {
 
-    private ImageButton home;
-    private Button checkout;
+    private boolean isMenuVisible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.home);
+        LinearLayout sideMenu = findViewById(R.id.sideMenu);
+        RelativeLayout sideMenus = findViewById(R.id.sideMenus);
+        ImageButton homeBtn = findViewById(R.id.homeBtn);
+        ImageButton sideBtn = findViewById(R.id.sideBtn);
 
+        homeBtn.setOnClickListener(v -> {
+            if (!isMenuVisible) {
+                // Slide in the menu
+                sideMenus.setVisibility(View.VISIBLE);
+                Animation slideIn = AnimationUtils.loadAnimation(this, R.anim.menu_slide_in);
+                sideMenu.startAnimation(slideIn);
+                sideMenu.setVisibility(View.VISIBLE);
+                isMenuVisible = true;
+            } else {
+                // Slide out the menu
 
-        // Correctly reference the ID
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.home), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+                Animation slideOut = AnimationUtils.loadAnimation(this, R.anim.menu_slide_out);
+                sideMenu.startAnimation(slideOut);
+                slideOut.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {}
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        sideMenus.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {}
+                });
+                isMenuVisible = false;
+            }
+        });
+        sideBtn.setOnClickListener(v -> {
+            if (!isMenuVisible) {
+                // Slide in the menu
+                sideMenus.setVisibility(View.VISIBLE);
+                Animation slideIn = AnimationUtils.loadAnimation(this, R.anim.menu_slide_in);
+                sideMenu.startAnimation(slideIn);
+                sideMenu.setVisibility(View.VISIBLE);
+                isMenuVisible = true;
+            } else {
+                // Slide out the menu
+
+                Animation slideOut = AnimationUtils.loadAnimation(this, R.anim.menu_slide_out);
+                sideMenu.startAnimation(slideOut);
+                slideOut.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {}
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        sideMenus.setVisibility(View.GONE);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {}
+                });
+                isMenuVisible = false;
+            }
         });
 
-
-
-        checkout = findViewById(R.id.checkoutBtn);
-        checkout.setOnClickListener(e -> {
-            // Navigate from home activity to checkout activity
-            Intent intent = new Intent(home.this, checkout.class);
-            startActivity(intent);
-        });
     }
-
 }
