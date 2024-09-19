@@ -1,4 +1,7 @@
-package com.example.poscanteen;import android.os.Bundle;
+package com.example.poscanteen;
+
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -6,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 public class home extends AppCompatActivity {
 
@@ -15,11 +19,15 @@ public class home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
+
         LinearLayout sideMenu = findViewById(R.id.sideMenu);
         RelativeLayout sideMenus = findViewById(R.id.sideMenus);
         ImageButton homeBtn = findViewById(R.id.homeBtn);
         ImageButton sideBtn = findViewById(R.id.sideBtn);
+        AppCompatButton checkout = findViewById(R.id.checkoutBtn);
 
+
+        // Home Button OnClickListener
         homeBtn.setOnClickListener(v -> {
             if (!isMenuVisible) {
                 // Slide in the menu
@@ -30,7 +38,6 @@ public class home extends AppCompatActivity {
                 isMenuVisible = true;
             } else {
                 // Slide out the menu
-
                 Animation slideOut = AnimationUtils.loadAnimation(this, R.anim.menu_slide_out);
                 sideMenu.startAnimation(slideOut);
                 slideOut.setAnimationListener(new Animation.AnimationListener() {
@@ -48,6 +55,8 @@ public class home extends AppCompatActivity {
                 isMenuVisible = false;
             }
         });
+
+        // Side Button OnClickListener
         sideBtn.setOnClickListener(v -> {
             if (!isMenuVisible) {
                 // Slide in the menu
@@ -58,7 +67,6 @@ public class home extends AppCompatActivity {
                 isMenuVisible = true;
             } else {
                 // Slide out the menu
-
                 Animation slideOut = AnimationUtils.loadAnimation(this, R.anim.menu_slide_out);
                 sideMenu.startAnimation(slideOut);
                 slideOut.setAnimationListener(new Animation.AnimationListener() {
@@ -77,5 +85,10 @@ public class home extends AppCompatActivity {
             }
         });
 
+        // Checkout Button OnClickListener
+        checkout.setOnClickListener(e -> {
+            Intent intent = new Intent(home.this, checkout.class);
+            startActivity(intent);
+        });
     }
 }
