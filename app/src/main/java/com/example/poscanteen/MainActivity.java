@@ -8,6 +8,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -20,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private FirebaseAuth mAuth;
-=======
+
 
 
     @Override
@@ -31,8 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
-=======
+
         username =findViewById(R.id.usernameInput);
+
         password =findViewById(R.id.passwordInput);
 
         // Correctly reference the ID

@@ -23,11 +23,15 @@ public class home extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.home);
 
-        home = findViewById(R.id.homeBtn);
-        home.setOnClickListener(e -> {
-            Intent intent = new Intent(home.this, home.class);
-            startActivity(intent);
+
+        // Correctly reference the ID
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.home), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
         });
+
+
 
         checkout = findViewById(R.id.checkoutBtn);
         checkout.setOnClickListener(e -> {
