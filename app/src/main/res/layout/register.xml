@@ -50,7 +50,7 @@
             app:layout_constraintTop_toBottomOf="@id/snacklogo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="40dp" />
 
         <!-- Login Prompt -->
         <TextView
@@ -137,61 +137,56 @@
             android:layout_marginTop="15dp" />
 
         <!-- Social icon section with divider and text -->
-        <!-- Social icon section with divider and text -->
+        <!-- Divider Container -->
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/socialicon"
+            android:id="@+id/registerDividerContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintTop_toBottomOf="@id/registerBtn"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/registerBtn">
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="14dp">
 
-            <!-- Divider Line -->
+            <!-- Left Divider -->
             <View
-                android:id="@+id/leftDivider"
+                android:id="@+id/registerLeftDivider"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
-                android:layout_marginStart="30dp"
                 android:layout_marginEnd="8dp"
-            android:background="#000000"
-            app:layout_constraintEnd_toStartOf="@id/white_background"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                android:background="#373737"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/registerSignUpText"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <View
-                android:id="@+id/white_background"
-                android:layout_width="130dp"
-                android:layout_height="20dp"
-                android:background="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <!-- White background behind the text -->
+            <!-- "or sign up with" TextView -->
             <TextView
+                android:id="@+id/registerSignUpText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="or sign up with"
                 android:textColor="#616161"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@id/white_background"
-                app:layout_constraintStart_toStartOf="@id/white_background"
-                app:layout_constraintTop_toTopOf="@id/white_background"
-                app:layout_constraintBottom_toBottomOf="@id/white_background" />
+                android:background="#FCF5FD"
+                android:padding="2dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/registerLeftDivider"
+                app:layout_constraintEnd_toStartOf="@id/registerRightDivider" />
 
-            <!-- Divider Line (right side) -->
+            <!-- Right Divider -->
             <View
-                android:id="@+id/rightDivider"
+                android:id="@+id/registerRightDivider"
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_marginStart="8dp"
-            android:layout_marginEnd="30dp"
-            android:background="#373737"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/white_background"
-            app:layout_constraintTop_toTopOf="parent" />
+                android:background="#373737"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/registerSignUpText"
+                app:layout_constraintEnd_toEndOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -203,7 +198,7 @@
             android:orientation="horizontal"
             android:gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@id/socialicon"
+            app:layout_constraintTop_toBottomOf="@id/registerDividerContainer"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
 
@@ -250,8 +245,9 @@
             app:layout_constraintTop_toBottomOf="@id/txtview"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="10dp"
             android:paddingBottom="8dp"
+            android:layout_marginBottom="10dp"
             />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
