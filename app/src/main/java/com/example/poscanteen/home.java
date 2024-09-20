@@ -28,14 +28,7 @@ public class home extends AppCompatActivity {
                     .commit();
         }
 
-        // Log status of menuBtn
-        if (menuBtn == null) {
-            Log.e("home", "menuBtn is null");
-            Toast.makeText(this, "menuBtn is null", Toast.LENGTH_SHORT).show();
-        } else {
-            Log.i("home", "menuBtn found successfully");
-            Toast.makeText(this, "menuBtn found successfully", Toast.LENGTH_SHORT).show();
-        }
+
 
         // Checkout button listener
         checkout.setOnClickListener(v -> {
