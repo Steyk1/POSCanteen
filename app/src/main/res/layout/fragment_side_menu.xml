@@ -57,6 +57,7 @@
 
             <!-- Home Option -->
             <LinearLayout
+                android:id="@+id/home"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
@@ -82,6 +83,7 @@
 
             <!-- Profile Option -->
             <LinearLayout
+                android:id="@+id/profile"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal">
@@ -106,6 +108,7 @@
 
             <!-- Product Option -->
             <LinearLayout
+                android:id="@+id/addProduct"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal">
@@ -130,6 +133,7 @@
 
             <!-- Inventory Option -->
             <LinearLayout
+                android:id="@+id/inventory"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal">

@@ -25,6 +25,7 @@
         <activity android:name=".register"></activity>
         <activity android:name=".checkout" />
         <activity android:name=".transaction" />
+        <activity android:name=".AddProductActivity" />
         <activity android:name=".SideMenuFragment" />
 
 

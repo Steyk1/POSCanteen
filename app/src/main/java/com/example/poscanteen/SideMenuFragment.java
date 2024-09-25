@@ -1,5 +1,6 @@
 package com.example.poscanteen;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,8 +20,9 @@ import androidx.fragment.app.Fragment;
 public class SideMenuFragment extends Fragment {
 
     private boolean isMenuVisible = false;
-    private LinearLayout sideMenu;
-    FrameLayout sideMenuLayout;
+    private LinearLayout sideMenu;                                     // WAG NYO TOH GALAWINNNN
+    FrameLayout sideMenuLayout;                                        // WAG NYO TOH GALAWINNNN
+    LinearLayout addProduct, home;
 
     @Nullable
     @Override
@@ -29,12 +32,24 @@ public class SideMenuFragment extends Fragment {
         sideMenu = view.findViewById(R.id.sideMenu);
         sideMenuLayout = getActivity().findViewById(R.id.sideMenus); // Accessing the activity's layout
         ImageButton sideBtn = view.findViewById(R.id.sideBtn);
+        addProduct = view.findViewById(R.id.addProduct);
+        home = view.findViewById(R.id.home);
 
         // Set the sideMenuLayout visibility to GONE initially
         sideMenuLayout.setVisibility(View.GONE);
 
         // Toggle side menu visibility on sideBtn click
         sideBtn.setOnClickListener(v -> toggleSideMenu());
+
+        addProduct.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), AddProductActivity.class); // Use your correct class name
+            startActivity(intent);
+        });
+
+        home.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), home.class);
+            startActivity(intent);
+        });
 
         return view;
     }
