@@ -231,7 +231,7 @@
             android:text="Add Items"
             android:textColor="@color/white"
             android:background="@drawable/rounded_button"
-            android:backgroundTint="#00128E"
+            android:backgroundTint="#d6c742"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
             android:id="@+id/additionalbtn"/>
@@ -242,7 +242,7 @@
             android:text="Cancel"
             android:textColor="@color/white"
             android:background="@drawable/rounded_button"
-            android:backgroundTint="#00128E"
+            android:backgroundTint="#d6c742"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp" />
 
@@ -252,7 +252,7 @@
             android:text="Pay"
             android:textColor="@color/white"
             android:background="@drawable/rounded_button"
-            android:backgroundTint="#00128E"
+            android:backgroundTint="#d6c742"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
             android:id="@+id/paybtn"/>
