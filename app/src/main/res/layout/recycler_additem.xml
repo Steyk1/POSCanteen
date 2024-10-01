@@ -52,7 +52,7 @@
                 android:orientation="horizontal"
                 android:gravity="center"
                 android:layout_weight="0"
-                android:background="@drawable/qty_container"
+                android:background="@drawable/field_container"
 
                 >
 
@@ -92,7 +92,7 @@
                 android:text="₱000.00"
                 android:textSize="18dp"
                 android:layout_marginStart="5dp"
-                android:background="@drawable/qty_container"
+                android:background="@drawable/field_container"
                 />
 
             <TextView
