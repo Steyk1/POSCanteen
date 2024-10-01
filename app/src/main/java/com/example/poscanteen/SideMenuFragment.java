@@ -15,7 +15,10 @@ import android.widget.ScrollView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+
+import com.google.android.material.textview.MaterialTextView;
 
 public class SideMenuFragment extends Fragment {
 
@@ -23,6 +26,8 @@ public class SideMenuFragment extends Fragment {
     private LinearLayout sideMenu;                                     // WAG NYO TOH GALAWINNNN
     FrameLayout sideMenuLayout;                                        // WAG NYO TOH GALAWINNNN
     LinearLayout addProduct, home;
+    MaterialTextView transactionHistory;
+    RelativeLayout profile;
 
     @Nullable
     @Override
@@ -34,7 +39,8 @@ public class SideMenuFragment extends Fragment {
         ImageButton sideBtn = view.findViewById(R.id.sideBtn);
         addProduct = view.findViewById(R.id.addProduct);
         home = view.findViewById(R.id.home);
-
+        transactionHistory = view.findViewById(R.id.transactionId);
+        profile =view.findViewById(R.id.profile);
         // Set the sideMenuLayout visibility to GONE initially
         sideMenuLayout.setVisibility(View.GONE);
 
@@ -46,10 +52,22 @@ public class SideMenuFragment extends Fragment {
             startActivity(intent);
         });
 
+        transactionHistory.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), transactionHistory.class); // Correct class name
+            startActivity(intent);
+        });
+
+
         home.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), home.class);
             startActivity(intent);
         });
+
+        profile.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), com.example.poscanteen.profile.class); // Correct class name for profile
+            startActivity(intent);
+        });
+
 
         return view;
     }

@@ -6,191 +6,196 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    android:id="@+id/addProfile"
-    tools:context=".AddProductActivity"
+    android:id="@+id/profile"
+    tools:context=".profile">
 
-    >
-
-    <LinearLayout
-        android:id="@+id/headerProfile"
+    <!-- ScrollView for the entire layout -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="53dp"
-        android:gravity="center_vertical"
-        android:background="#00128E"
-        android:padding="0dp"
-        android:orientation="horizontal"
-        >
-        <!-- Hamburger Menu Icon -->
-        <ImageButton
-            android:id="@+id/menubtn"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_marginStart="2dp"
-            android:src="@drawable/baseline_menu_24"
-            android:background="#00FFFFFF"
-            android:scaleType="fitCenter"
-            app:tint="@color/white"
-            android:contentDescription="Menu button" />
-
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/profileFormContainer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="2dp"
-            android:layout_marginRight="50dp"
-            android:text="Profile"
-            android:textColor="@android:color/white"
-            android:textSize="25sp" />
+            android:orientation="vertical">
 
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/profileForm"
+            <!-- Profile Header -->
+            <LinearLayout
+                android:id="@+id/headerProfile"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:gravity="center_vertical"
+                android:background="#00128E"
+                android:orientation="horizontal">
+
+                <!-- Hamburger Menu Icon -->
+                <ImageButton
+                    android:id="@+id/menubtn"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_menu_24"
+                    android:background="#00FFFFFF"
+                    android:scaleType="fitCenter"
+                    app:tint="@color/white"
+                    android:contentDescription="Menu button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Profile"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <!-- Profile Form -->
+            <LinearLayout
+                android:id="@+id/profileForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="21dp">
+
+                <TextView
+                    android:id="@+id/ChangePasswordTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change Password"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <!-- Username Input -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/usernameEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/field_container"
+                    android:paddingStart="10dp"
+                    android:hint="Username"
+                    android:textSize="16sp" />
+
+                <!-- Email Input -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/emailEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/field_container"
+                    android:paddingStart="10dp"
+                    android:hint="Email"
+                    android:textSize="16sp" />
+
+                <!-- Current Password Input -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Current Password"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/currentPasswordEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/field_container"
+                    android:paddingStart="10dp"
+                    android:hint="Current Password"
+                    android:textSize="16sp" />
+
+                <!-- New Password Input -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New Password"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/newPasswordEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/field_container"
+                    android:paddingStart="10dp"
+                    android:hint="New Password"
+                    android:textSize="16sp" />
+
+                <!-- Confirm Password Input -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirm Password"
+                    android:layout_marginTop="20dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/confirmPasswordEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:background="@drawable/field_container"
+                    android:paddingStart="10dp"
+                    android:hint="Confirm Password"
+                    android:textSize="16sp" />
+
+                <!-- Buttons container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp">
+
+                    <!-- Cancel Button -->
+                    <Button
+                        android:id="@+id/cancel_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel"
+                        android:backgroundTint="@color/yellow" />
+
+                    <!-- Update Button, aligned to the right of Cancel Button -->
+                    <Button
+                        android:id="@+id/update_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Update"
+                        android:backgroundTint="@color/yellow"
+                        android:layout_marginStart="10dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/sideMenus"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="4dp"
-        android:layout_below="@id/headerProfile"
-        android:layout_marginTop="21dp"
-        android:layout_marginLeft="20dp"
-        >
-
-        <TextView
-            android:id="@+id/ChangePassowrdtxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Change Password"
-            android:textSize="16sp"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Username"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="16sp"
-            />
-        <EditText
-            android:layout_marginTop="5dp"
-            android:id="@+id/usernameEdit"
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:background="@drawable/field_container"
-            android:paddingStart="10dp"
-            android:hint="Username"
-            android:textSize="16sp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="16sp"
-            />
-        <EditText
-            android:layout_marginTop="5dp"
-            android:id="@+id/emailEdit"
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:background="@drawable/field_container"
-            android:paddingStart="10dp"
-            android:hint="Email"
-            android:textSize="16sp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Current Password"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="16sp"
-            />
-        <EditText
-            android:layout_marginTop="5dp"
-            android:id="@+id/currentPasswordEdit"
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:background="@drawable/field_container"
-            android:paddingStart="10dp"
-            android:hint="Username"
-            android:textSize="16sp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="New Password"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="16sp"
-            />
-        <EditText
-            android:layout_marginTop="5dp"
-            android:id="@+id/newPasswordEdit"
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:background="@drawable/field_container"
-            android:paddingStart="10dp"
-            android:hint="New Password "
-            android:textSize="16sp"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Confirm Password"
-            android:layout_marginTop="20dp"
-            android:layout_marginHorizontal="10dp"
-            android:textSize="16sp"
-            />
-        <EditText
-            android:layout_marginTop="5dp"
-            android:id="@+id/ConfirmPasswordEdit"
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:background="@drawable/field_container"
-            android:paddingStart="10dp"
-            android:hint="Confirm Passowrd"
-            android:textSize="16sp"
-            />
-
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
-        android:layout_centerHorizontal="true"
-
-        >
-
-    <Button
-        android:id="@+id/cancel_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cancel"
-        android:backgroundTint="@color/yellow" />
-
-        <Button
-
-            android:layout_toRightOf="@id/cancel_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Update"
-            android:backgroundTint="@color/yellow"
-            android:layout_marginLeft="10dp"
-            />
-
-</RelativeLayout>
-
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
 
 </RelativeLayout>

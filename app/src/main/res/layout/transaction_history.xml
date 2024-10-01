@@ -2,7 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transactionId"
+    tools:context=".transactionHistory"
+
+    >
 
 
 
@@ -14,13 +19,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         >
 
         <ImageButton
+            android:id="@+id/menubtn"
             android:layout_width="40dp"
             android:layout_height="match_parent"
             android:layout_marginStart="5dp"
-            android:src="@drawable/baseline_close_24"
+            android:src="@drawable/baseline_menu_24"
             android:background="#00FFFFFF"
             android:scaleType="fitCenter"
             app:tint="@color/white" />
@@ -35,6 +42,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginEnd="15dp"
             android:textSize="20dp" />
+
 
 
     </RelativeLayout>
@@ -74,10 +82,19 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:id="@+id/recyclerViewHistory"
+            />
 
 
     </ScrollView>
 
+    <FrameLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/sideMenus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
