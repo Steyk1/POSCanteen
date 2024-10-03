@@ -228,25 +228,24 @@
             android:gravity="center"
             android:padding="16dp">
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:shape="rectangle"
                 android:textSize="18sp"
                 android:text="CANCEL"
-                android:textColor="#000000"
-                android:backgroundTint="#FFD700"
-                android:layout_marginRight="16dp" />
+                android:textColor="#ffffff"
+                android:layout_marginRight="55dp"
+                android:background="@drawable/cancel_button"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button_confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:text="CONFIRM"
-                android:backgroundTint="#FFD700"
-                android:textColor="#000000" />
+                android:textColor="#ffffff"
+                android:background="@drawable/cancel_button"/>
         </LinearLayout>
 
         <!-- Order and Checkout Section -->
