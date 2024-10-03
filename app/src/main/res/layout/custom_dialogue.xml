@@ -8,42 +8,48 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#fbffff"
         android:orientation="vertical"
+        android:layout_margin="5dp"
         android:gravity="center_horizontal">
 
         <!-- Header Menu -->
         <!-- Quantity Section -->
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:padding="1dp"
             android:layout_gravity="center_horizontal"
             android:gravity="center">
 
             <TextView
                 android:id="@+id/quantity_label"
-                android:layout_width="wrap_content"
+                android:layout_width="420dp"
                 android:layout_height="wrap_content"
                 android:text="QUANTITY"
                 android:textSize="20sp"
                 android:textColor="#FFFFFF"
                 android:background="@drawable/quanti_border"
                 android:padding="8dp"
-                android:gravity="center"/>
+                android:gravity="center"
+                />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_marginTop="5dp">
 
                 <Button
                     android:id="@+id/decrease_quantity"
-                    android:layout_width="wrap_content"
+                    android:layout_width="55dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="#FFD700"
                     android:text="-"
-                    android:textSize="20sp" />
+                    android:textSize="18sp"
+                    android:textColor="#000000"/>
 
                 <TextView
                     android:id="@+id/quantity_value"
@@ -55,79 +61,84 @@
 
                 <Button
                     android:id="@+id/increase_quantity"
-                    android:layout_width="wrap_content"
+                    android:layout_width="55dp"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="#FFD700"
                     android:text="+"
-                    android:textSize="20sp" />
+                    android:textSize="18sp"
+                    android:textColor="#000000" />
             </LinearLayout>
         </LinearLayout>
 
         <!-- Adds On Section -->
-        <TextView
-            android:id="@+id/addons_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ADDS ON"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:background="#0000FF"
-            android:padding="8dp"
-            android:gravity="center"/>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:padding="8dp">
-
-            <Button
-                android:id="@+id/addon_pearl"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/addons_label"
+                android:layout_width="420dp"
                 android:layout_height="wrap_content"
-                android:text="pearl"
-                android:backgroundTint="#32CD32"
-                android:textColor="#FFFFFF" />
-
-            <Button
-                android:id="@+id/addon_nata"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="nata"
-                android:backgroundTint="#1E90FF"
+                android:text="ADDS ON"
+                android:textSize="20sp"
                 android:textColor="#FFFFFF"
-                android:layout_marginLeft="8dp" />
+                android:background="@drawable/quanti_border"
+                android:padding="8dp"
+                android:gravity="center"
+                android:layout_margin="10dp"/>
 
-            <Button
-                android:id="@+id/addon_coffee_jelly"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="420dp"
                 android:layout_height="wrap_content"
-                android:text="coffee jelly"
-                android:backgroundTint="#0000FF"
-                android:textColor="#FFFFFF"
-                android:layout_marginLeft="8dp" />
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="8dp">
 
-            <Button
-                android:id="@+id/addon_nothing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:backgroundTint="#ADD8E6"
-                android:text="nothing"
-                android:textColor="#FFFFFF" />
+                <Button
+                    android:id="@+id/addon_pearl"
+                    android:layout_width="85dp"
+                    android:layout_height="60dp"
+                    android:text="pearl"
+                    android:backgroundTint="#32CD32"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="2dp"/>
+
+                <Button
+                    android:id="@+id/addon_nata"
+                    android:layout_width="85dp"
+                    android:layout_height="60dp"
+                    android:text="nata"
+                    android:backgroundTint="#0000FF"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="2dp" />
+
+                <Button
+                    android:id="@+id/addon_coffee_jelly"
+                    android:layout_width="90dp"
+                    android:layout_height="60dp"
+                    android:text="coffee jelly"
+                    android:backgroundTint="#0000FF"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="2dp" />
+
+                <Button
+                    android:id="@+id/addon_nothing"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#0000FF"
+                    android:text="nothing"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="2dp"/>
         </LinearLayout>
 
         <!-- Sizes Section -->
         <TextView
             android:id="@+id/sizes_label"
-            android:layout_width="wrap_content"
+            android:layout_width="420dp"
             android:layout_height="wrap_content"
             android:text="SIZES"
             android:textSize="20sp"
             android:textColor="#FFFFFF"
-            android:background="#0000FF"
+            android:background="@drawable/quanti_border"
             android:padding="8dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_margin="15dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -145,10 +156,10 @@
 
                 <Button
                     android:id="@+id/size_8oz"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:text="8oz"
-                    android:backgroundTint="#B0C4DE"
+                    android:backgroundTint="#738287"
                     android:textColor="#FFFFFF" />
 
                 <TextView
@@ -169,10 +180,10 @@
 
                 <Button
                     android:id="@+id/size_12oz"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:text="12oz"
-                    android:backgroundTint="#808080"
+                    android:backgroundTint="#738287"
                     android:textColor="#FFFFFF" />
 
                 <TextView
@@ -193,10 +204,10 @@
 
                 <Button
                     android:id="@+id/size_16oz"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:text="16oz"
-                    android:backgroundTint="#32CD32"
+                    android:backgroundTint="#3bab5a"
                     android:textColor="#FFFFFF" />
 
                 <TextView
@@ -221,39 +232,25 @@
                 android:id="@+id/button_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:shape="rectangle"
+                android:textSize="18sp"
                 android:text="CANCEL"
-                android:backgroundTint="#FFD700"
                 android:textColor="#000000"
+                android:backgroundTint="#FFD700"
                 android:layout_marginRight="16dp" />
 
             <Button
                 android:id="@+id/button_confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="18sp"
                 android:text="CONFIRM"
                 android:backgroundTint="#FFD700"
                 android:textColor="#000000" />
         </LinearLayout>
 
         <!-- Order and Checkout Section -->
-        <TextView
-            android:id="@+id/current_order"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Current Order: 0"
-            android:textSize="16sp"
-            android:layout_gravity="center"
-            android:padding="8dp" />
 
-        <Button
-            android:id="@+id/button_checkout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Checkout"
-            android:backgroundTint="#800080"
-            android:textColor="#FFFFFF"
-            android:padding="12dp"
-            android:layout_gravity="center" />
 
     </LinearLayout>
 
