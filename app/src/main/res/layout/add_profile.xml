@@ -176,18 +176,18 @@
         <!-- Cancel Button -->
         <Button
             android:id="@+id/cancel_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:text="Cancel"
-            android:backgroundTint="@color/yellow" />
+            android:backgroundTint="#001283" />
 
         <!-- Update Button, aligned to the right of Cancel Button -->
         <Button
             android:id="@+id/update_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
             android:text="Update"
-            android:backgroundTint="@color/yellow"
+            android:backgroundTint="#001283"
             android:layout_marginStart="10dp" />
     </LinearLayout>
 
