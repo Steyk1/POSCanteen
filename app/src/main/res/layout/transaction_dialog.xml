@@ -34,7 +34,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_gravity="center"
-        android:visibility="gone"/> <!-- Hide this since it's replaced by the header -->
+        android:visibility="gone"/> <!-- Hide this since it's replaced by the header k -->
 
     <TextView
         android:id="@+id/transactionHeader"
@@ -73,14 +73,10 @@
 
     <Button
         android:id="@+id/btnOkay"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/blue"
 
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:backgroundTint="#001283"
  
         android:text="Okay"
         android:layout_marginTop="20dp"
